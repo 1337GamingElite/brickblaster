@@ -47,7 +47,7 @@ public class Ball : MonoBehaviour
 		if (isReleased)
 			bounceSound.Play(); // Plays the bounce sound with every collision after being released
 		// This if statement makes sure that the speed (not velocity) is between a certain minimum and maximum value (factoring when the tweaks are added)
-		// The speed is the diagonal velocity
+		// The speed is the diagonal velocity (used Pythagorean theorem to find out speed given the x and y velocities)
 		if (Mathf.Sqrt(((ball.velocity.x + tweak) * (ball.velocity.x + tweak)) + ((ball.velocity.y + tweak) * (ball.velocity.y + tweak))) > minimumSpeed 
 			&& Mathf.Sqrt(((ball.velocity.x + tweak) * (ball.velocity.x + tweak)) + ((ball.velocity.y + tweak) * (ball.velocity.y + tweak))) < maximumSpeed)
 		{
